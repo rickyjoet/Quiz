@@ -1,151 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
 
-    <div class="quiz-wrapper"> 
+<body>
 
-      <div>
-        <div id="questionBox1" class="question">
-            What does red and blue make?
+  <div class="quiz-wrapper">
+
+    <div class="show">
+      <div id="questionBox1" class="question">
+        What does red and blue make?
+      </div>
+      <div class="options">
+        <ul id="ul">
+          <li id="opt1" onclick="button(this)">yellow</li>
+          <li id="opt2" onclick="button(this)">green</li>
+          <li id="opt3" onclick="button(this)">red</li>
+          <li id="opt4" onclick="button(this)" data="correct">purple</li>
+        </ul>
+      </div>
+      <div class="score">
+        <div class="next">
+          <button class="btnNext" type="button" onclick="next(this)">
+            Next
+          </button>
         </div>
-        <div class="options">
-            <ul id="ul">
-                <li id="opt1" onclick="button(this)">yellow</li>
-                <li id="opt2" onclick="button(this)">green</li>
-                <li id="opt3" onclick="button(this)">red</li>
-                <li id="opt4" onclick="button(this)">purple</li>
-            </ul>
-        </div>
-        <div class="score">
-            <div class="next">
-                <button id="btnNext" type="button" onclick="next()">
-                  Next
-                </button>
-            </div>
-            <div class="score-card">
-                SCORE: <span id="scoreCard">0</span>
-            </div>
+        <div class="score-card">
+          SCORE: <span class="scoreCard">0</span>
         </div>
       </div>
-
-      <div>
-        <div id="questionBox2" class="question">
-            What does yellow and blue make?
-        </div>
-        <div class="options">
-            <ul id="ul">
-                <li id="opt1" onclick="button(this)">black</li>
-                <li id="opt2" onclick="button(this)">green</li>
-                <li id="opt3" onclick="button(this)">white</li>
-                <li id="opt4" onclick="button(this)">gold</li>
-            </ul>
-        </div>
-        <div class="score">
-            <div class="next">
-                <button id="btnNext" type="button" onclick="next()">
-                  Next
-                </button>
-            </div>
-            <div class="score-card">
-                SCORE: <span id="scoreCard">0</span>
-            </div>
-        </div>
-      </div>
-
-
-      <div>
-        <div id="questionBox3" class="question">
-            What does red and yellow make?
-        </div>
-        <div class="options">
-            <ul id="ul">
-                <li id="opt1" onclick="button(this)">red</li>
-                <li id="opt2" onclick="button(this)">blue</li>
-                <li id="opt3" onclick="button(this)">green</li>
-                <li id="opt4" onclick="button(this)">orange</li>
-            </ul>
-        </div>
-        <div class="score">
-            <div class="next">
-                <button id="btnNext" type="button" onclick="next()">
-                  Next
-                </button>
-            </div>
-            <div class="score-card">
-                SCORE: <span id="scoreCard">0</span>
-            </div>
-        </div>
-      </div>
-
-
-      <div>
-        <div id="questionBox4" class="question">
-            What does black and white make?
-        </div>
-        <div class="options">
-            <ul id="ul">
-                <li id="opt1" onclick="button(this)">purple</li>
-                <li id="opt2" onclick="button(this)">blue</li>
-                <li id="opt3" onclick="button(this)">clear</li>
-                <li id="opt4" onclick="button(this)">grey</li>
-            </ul>
-        </div>
-        <div class="score">
-            <div class="next">
-                <button id="btnNext" type="button" onclick="next()">
-                  Next
-                </button>
-            </div>
-            <div class="score-card">
-                SCORE: <span id="scoreCard">0</span>
-            </div>
-        </div>
-      </div>
-
-      <div>
-        <div id="questionBox5" class="question">
-            What goes up must come ____?
-        </div>
-        <div class="options">
-            <ul id="ul">
-                <li id="opt1" onclick="button(this)">back</li>
-                <li id="opt2" onclick="button(this)">left</li>
-                <li id="opt3" onclick="button(this)">down</li>
-                <li id="opt4" onclick="button(this)">up again</li>
-            </ul>
-        </div>
-        <div class="score">
-            <div class="next">
-                <button id="btnNext" type="button" onclick="next()">
-                  Next
-                </button>
-            </div>
-            <div class="score-card">
-                SCORE: <span id="scoreCard">0</span>
-            </div>
-        </div>
-      </div>
-
-
     </div>
 
-    
+    <div>
+      <div id="questionBox2" class="question">
+        What does yellow and blue make?
+      </div>
+      <div class="options">
+        <ul id="ul">
+          <li id="opt1" onclick="button(this)">black</li>
+          <li id="opt2" onclick="button(this)" data="correct">green</li>
+          <li id="opt3" onclick="button(this)">white</li>
+          <li id="opt4" onclick="button(this)">gold</li>
+        </ul>
+      </div>
+      <div class="score">
+        <div class="next">
+          <button class="btnNext" type="button" onclick="next(this)">
+            Next
+          </button>
+        </div>
+        <div class="score-card">
+          SCORE: <span class="scoreCard">0</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div>
+      <div id="questionBox3" class="question">
+        What does red and yellow make?
+      </div>
+      <div class="options">
+        <ul id="ul">
+          <li id="opt1" onclick="button(this)">red</li>
+          <li id="opt2" onclick="button(this)">blue</li>
+          <li id="opt3" onclick="button(this)">green</li>
+          <li id="opt4" onclick="button(this)" data="correct">orange</li>
+        </ul>
+      </div>
+      <div class="score">
+        <div class="next">
+          <button class="btnNext" type="button" onclick="next(this)">
+            Next
+          </button>
+        </div>
+        <div class="score-card">
+          SCORE: <span class="scoreCard">0</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div>
+      <div id="questionBox4" class="question">
+        What does black and white make?
+      </div>
+      <div class="options">
+        <ul id="ul">
+          <li id="opt1" onclick="button(this)">purple</li>
+          <li id="opt2" onclick="button(this)">blue</li>
+          <li id="opt3" onclick="button(this)">clear</li>
+          <li id="opt4" onclick="button(this)" data="correct">grey</li>
+        </ul>
+      </div>
+      <div class="score">
+        <div class="next">
+          <button class="btnNext" type="button" onclick="next(this)">
+            Next
+          </button>
+        </div>
+        <div class="score-card">
+          SCORE: <span class="scoreCard">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="questionBox5" class="question">
+        What goes up must come ____?
+      </div>
+      <div class="options">
+        <ul id="ul">
+          <li id="opt1" onclick="button(this)">back</li>
+          <li id="opt2" onclick="button(this)">left</li>
+          <li id="opt3" onclick="button(this)" data="correct">down</li>
+          <li id="opt4" onclick="button(this)">up again</li>
+        </ul>
+      </div>
+      <div class="score">
+        <div class="next">
+          <button class="btnNext" type="button" onclick="next(this)">
+            Next
+          </button>
+        </div>
+        <div class="score-card">
+          SCORE: <span class="scoreCard">0</span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 
 
 
 
 
 
-    <!-- <div class="quiz-container">
+
+
+  <!-- <div class="quiz-container">
       <div class="question-number">
         <h3>
           Question <span class="question-num-value"></span> of
@@ -162,13 +163,13 @@
         <div id="3" class="option4" onclick="check(this)"></div>
       </div>
       <div class="button btn">
-        <button type="button" onclick="next()" class="btn">Next</button>
+        <button type="button" onclick="next(this)" class="btn">Next</button>
       </div>
       <div class="answers-tracker"></div>
     </div>
 
 
-  
+
     <div class="quiz-over">
       <div class="box">
         <h1>
@@ -179,7 +180,8 @@
           Try Again
         </h1>
         <button type="button" onclick="tryAgain()">Try Again!</button> -->
-      </div>
-    </div>
-  </body>
+  </div>
+  </div>
+</body>
+
 </html>
