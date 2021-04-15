@@ -11,26 +11,57 @@
 
 // document.getElementById("btnNext").addEventListener("click", displayAnswer);
 
+var point = 0;
+console.log('point on page load: ' + point);
 
-var button = function (e) {
-  //get clicked value
-  var str = e.innerText;
+var next = function(i) {
 
-  //check if right answer
-  if (str == "purple") {
-    console.log("correct");
-    //get score and change string to Number
-    var score = Number(document.getElementById("scoreCard").innerText);
-    console.log(score);
-    //add 1
-    score = score + 1;
-    //change score on screen
-    document.getElementById("scoreCard").innerText = score;
-  } else {
-    //wrong answers
-    console.log("wrong");
-    //don't forget to add the html element if you're using this LOL
-    document.getElementById("wrong").style.display = "block";
+  // console.log(i);
+
+  //get parent div
+  var parent = i.parentElement.parentElement.parentElement;
+
+  //add class show to next div
+  parent.nextElementSibling.className = 'show';
+
+  //change class from show to hide
+  parent.attributes[0].value = 'hide';
+
+}
+
+var button = function(e) {
+  //get clicked get element
+  // console.log(e.attributes);
+
+  var attr = e.attributes;
+  // console.log(attr);
+
+  //get data attributes
+  var data = attr[2];
+  if (data !== undefined) {
+    data = data.value;
   }
-};
+  // console.log(data);
 
+  //if data attribute exist then it is the right answers
+  if (data == "correct") {
+    // console.log('it worked');
+    point = point + 1;
+    // console.log(point);
+
+    var scoreCard = document.getElementsByClassName('scoreCard');
+    // console.log(typeof scoreCard);
+    for (i = 0; i < scoreCard.length; i++) {
+      // console.log(scoreCard[i]);
+      scoreCard[i].innerText = point;
+    }
+
+    //change score by adding +1
+
+    //else then it is the wrong answers
+  } else {
+    console.log('wrong answer');
+  }
+  //show incorrect message
+
+};
