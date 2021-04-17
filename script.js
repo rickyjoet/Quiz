@@ -12,24 +12,22 @@
 // document.getElementById("btnNext").addEventListener("click", displayAnswer);
 
 var point = 0;
-console.log('point on page load: ' + point);
+console.log("point on page load: " + point);
 
-var next = function(i) {
-
+var next = function (i) {
   // console.log(i);
 
   //get parent div
   var parent = i.parentElement.parentElement.parentElement;
 
   //add class show to next div
-  parent.nextElementSibling.className = 'show';
+  parent.nextElementSibling.className = "show";
 
   //change class from show to hide
-  parent.attributes[0].value = 'hide';
+  parent.attributes[0].value = "hide";
+};
 
-}
-
-var button = function(e) {
+var button = function (e) {
   //get clicked get element
   // console.log(e.attributes);
 
@@ -49,7 +47,7 @@ var button = function(e) {
     point = point + 1;
     // console.log(point);
 
-    var scoreCard = document.getElementsByClassName('scoreCard');
+    var scoreCard = document.getElementsByClassName("scoreCard");
     // console.log(typeof scoreCard);
     for (i = 0; i < scoreCard.length; i++) {
       // console.log(scoreCard[i]);
@@ -60,8 +58,7 @@ var button = function(e) {
 
     //else then it is the wrong answers
   } else {
-    console.log('wrong answer');
+    console.log("wrong answer");
   }
   //show incorrect message
-
 };
