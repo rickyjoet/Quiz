@@ -18,7 +18,7 @@ body {
 .hide {
   display: none;
 }
-/* class quiz wrapper for all div elements */
+
 .quiz-wrapper>div {
   height: 400px;
   width: 600px;
@@ -111,4 +111,8 @@ body {
   border: none;
   color: white;
   border-radius: 8px;
+}
+
+.disableButtons {
+  pointer-events: none;
 }
