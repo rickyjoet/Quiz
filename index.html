@@ -11,24 +11,22 @@
 </head>
 
 <body>
-
   <div class="quiz-wrapper">
-
     <div class="show">
       <div id="questionBox1" class="question">
         What does red and blue make?
       </div>
       <div class="options">
         <ul id="ul">
-          <li id="opt1" onclick="button(this)">yellow</li>
-          <li id="opt2" onclick="button(this)">green</li>
-          <li id="opt3" onclick="button(this)">red</li>
-          <li id="opt4" onclick="button(this)" data="correct">purple</li>
+          <li id="opt1" onclick="answerButton(this)">yellow</li>
+          <li id="opt2" onclick="answerButton(this)">green</li>
+          <li id="opt3" onclick="answerButton(this)">red</li>
+          <li id="opt4" onclick="answerButton(this)" data="correct">purple</li>
         </ul>
       </div>
       <div class="score">
         <div class="next">
-          <button class="btnNext" type="button" onclick="next(this)">
+          <button class="btnNext" type="button" onclick="nextButton(this)">
             Next
           </button>
         </div>
@@ -44,15 +42,15 @@
       </div>
       <div class="options">
         <ul id="ul">
-          <li id="opt1" onclick="button(this)">black</li>
-          <li id="opt2" onclick="button(this)" data="correct">green</li>
-          <li id="opt3" onclick="button(this)">white</li>
-          <li id="opt4" onclick="button(this)">gold</li>
+          <li id="opt1" onclick="answerButton(this)">black</li>
+          <li id="opt2" onclick="answerButton(this)" data="correct">green</li>
+          <li id="opt3" onclick="answerButton(this)">white</li>
+          <li id="opt4" onclick="answerButton(this)">gold</li>
         </ul>
       </div>
       <div class="score">
         <div class="next">
-          <button class="btnNext" type="button" onclick="next(this)">
+          <button class="btnNext" type="button" onclick="nextButton(this)">
             Next
           </button>
         </div>
@@ -69,15 +67,15 @@
       </div>
       <div class="options">
         <ul id="ul">
-          <li id="opt1" onclick="button(this)">red</li>
-          <li id="opt2" onclick="button(this)">blue</li>
-          <li id="opt3" onclick="button(this)">green</li>
-          <li id="opt4" onclick="button(this)" data="correct">orange</li>
+          <li id="opt1" onclick="answerButton(this)">red</li>
+          <li id="opt2" onclick="answerButton(this)">blue</li>
+          <li id="opt3" onclick="answerButton(this)">green</li>
+          <li id="opt4" onclick="answerButton(this)" data="correct">orange</li>
         </ul>
       </div>
       <div class="score">
         <div class="next">
-          <button class="btnNext" type="button" onclick="next(this)">
+          <button class="btnNext" type="button" onclick="nextButton(this)">
             Next
           </button>
         </div>
@@ -94,15 +92,15 @@
       </div>
       <div class="options">
         <ul id="ul">
-          <li id="opt1" onclick="button(this)">purple</li>
-          <li id="opt2" onclick="button(this)">blue</li>
-          <li id="opt3" onclick="button(this)">clear</li>
-          <li id="opt4" onclick="button(this)" data="correct">grey</li>
+          <li id="opt1" onclick="answerButton(this)">purple</li>
+          <li id="opt2" onclick="answerButton(this)">blue</li>
+          <li id="opt3" onclick="answerButton(this)">clear</li>
+          <li id="opt4" onclick="answerButton(this)" data="correct">grey</li>
         </ul>
       </div>
       <div class="score">
         <div class="next">
-          <button class="btnNext" type="button" onclick="next(this)">
+          <button class="btnNext" type="button" onclick="nextButton(this)">
             Next
           </button>
         </div>
@@ -118,15 +116,15 @@
       </div>
       <div class="options">
         <ul id="ul">
-          <li id="opt1" onclick="button(this)">back</li>
-          <li id="opt2" onclick="button(this)">left</li>
-          <li id="opt3" onclick="button(this)" data="correct">down</li>
-          <li id="opt4" onclick="button(this)">up again</li>
+          <li id="opt1" onclick="answerButton(this)">back</li>
+          <li id="opt2" onclick="answerButton(this)">left</li>
+          <li id="opt3" onclick="answerButton(this)" data="correct">down</li>
+          <li id="opt4" onclick="answerButton(this)">up again</li>
         </ul>
       </div>
       <div class="score">
         <div class="next">
-          <button class="btnNext" type="button" onclick="next(this)">
+          <button class="btnNext" type="button" onclick="nextButton(this)">
             Next
           </button>
         </div>
@@ -163,7 +161,7 @@
         <div id="3" class="option4" onclick="check(this)"></div>
       </div>
       <div class="button btn">
-        <button type="button" onclick="next(this)" class="btn">Next</button>
+        <button type="button" onclick="next(Buttonthis)" class="btn">Next</button>
       </div>
       <div class="answers-tracker"></div>
     </div>

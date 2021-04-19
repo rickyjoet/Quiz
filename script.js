@@ -13,13 +13,13 @@
 
 var point = 0;
 console.log("point on page load: " + point);
-
-var next = function (i) {
-  // console.log(i);
+// two seperate functions listed below 
+var nextButton = function (i) {
+  console.log(i);
 
   //get parent div
   var parent = i.parentElement.parentElement.parentElement;
-
+  // console.log()
   //add class show to next div
   parent.nextElementSibling.className = "show";
 
@@ -27,7 +27,7 @@ var next = function (i) {
   parent.attributes[0].value = "hide";
 };
 
-var button = function (e) {
+var answerButton = function (e) {
   //get clicked get element
   // console.log(e.attributes);
 
@@ -35,7 +35,7 @@ var button = function (e) {
   // console.log(attr);
 
   //get data attributes
-  var data = attr[2];
+  var data = attr[2]; // data refers to third attribute to html element
   if (data !== undefined) {
     data = data.value;
   }
