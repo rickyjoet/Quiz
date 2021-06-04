@@ -12,10 +12,9 @@
 // document.getElementById("btnNext").addEventListener("click", displayAnswer);
 
 var point = 0;
-console.log('point on page load: ' + point);
+console.log("point on page load: " + point);
 
 var nextButton = function (i) {
-
   // console.log(i);  //  i = .btnNext
 
   //get parent div
@@ -23,11 +22,11 @@ var nextButton = function (i) {
   // console.log('parent: ', parent);
 
   //add class show to next div
-  parent.nextElementSibling.className = 'show';
+  parent.nextElementSibling.className = "show";
 
   //change class from show to hide
-  parent.attributes[0].value = 'hide';
-}
+  parent.attributes[0].value = "hide";
+};
 
 var answerButton = function (e) {
   //get clicked get element
@@ -37,9 +36,10 @@ var answerButton = function (e) {
   // console.log(attr);
 
   //get data attributes
-  var thirdAttr = attr[2];  // 3rd attribute of element
-  if (thirdAttr !== undefined) {  // if 3rd attribute exists
-    thirdAttr = thirdAttr.value;  // thirdAttr.value is data='correct'
+  var thirdAttr = attr[2]; // 3rd attribute of element
+  if (thirdAttr !== undefined) {
+    // if 3rd attribute exists
+    thirdAttr = thirdAttr.value; // thirdAttr.value is data='correct'
   }
   // console.log(data);
 
@@ -49,7 +49,7 @@ var answerButton = function (e) {
     point = point + 1;
     // console.log(point);
 
-    var scoreCard = document.getElementsByClassName('scoreCard');
+    var scoreCard = document.getElementsByClassName("scoreCard");
     // console.log(typeof scoreCard);
     for (i = 0; i < scoreCard.length; i++) {
       // console.log(scoreCard[i]);
@@ -61,13 +61,12 @@ var answerButton = function (e) {
     // console.log(answerButtons);
 
     for (i = 0; i < answerButtons.length; i++) {
-      answerButtons[i].className = 'disableButtons';
+      answerButtons[i].className = "disableButtons";
     }
 
     //else then it is the wrong answers
   } else {
-    console.log('wrong answer');
+    console.log("wrong answer");
   }
   //show incorrect message
-
 };
